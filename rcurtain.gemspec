@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'rcurtain'
-  s.version     = '0.0.7'
+  s.version     = '0.0.8'
   s.date        = '2017-07-03'
   s.summary     = "RCurtain"
   s.description = "Open the curtain and see if your feature is enabled"
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_runtime_dependency "hiredis"
-  s.add_runtime_dependency "redis", "~>3.2"
+  s.add_runtime_dependency "redis"
   s.add_development_dependency 'fakeredis'
   s.add_development_dependency "rspec"
 end
