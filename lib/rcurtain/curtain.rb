@@ -10,7 +10,7 @@ module Rcurtain
       if Rcurtain.configuration.redis
         @redis = Rcurtain.configuration.redis
       else
-        @redis = Redis.new(:url => Rcurtain.configuration.url) if Rcurtain.configuration.url
+        @redis = Redis.new(:url => Rcurtain.configuration.url)
       end
     end
 
