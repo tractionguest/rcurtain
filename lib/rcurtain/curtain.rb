@@ -7,7 +7,11 @@ module Rcurtain
     attr_reader :redis
 
     def initialize
-      @redis = Redis.new(:url => Rcurtain.configuration.url)
+      if Rcurtain.configuration.redis
+        @redis = Rcurtain.configuration.redis
+      else
+        @redis = Redis.new(:url => Rcurtain.configuration.url)
+      end
     end
 
     def opened?(feature, users = [])
